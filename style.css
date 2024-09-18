@@ -1,65 +1,109 @@
 /* Mengatur tinggi minimum halaman agar mencakup seluruh viewport */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Menggunakan flexbox untuk menempatkan footer di bawah */
 body {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.logo h1 {
+  color: #fff;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+  border-radius: 5px;
 }
 
 main {
-    flex: 1; /* Membuat konten utama mengambil sisa ruang */
+  flex: 1; /* Membuat konten utama mengambil sisa ruang */
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
 }
 
 footer p {
-    margin: 10px 0;
-    font-size: 14px;
+  margin: 10px 0;
+  font-size: 14px;
 }
 
 footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
 }
 
 footer ul li {
-    display: inline-block;
-    margin: 0 10px;
+  display: inline-block;
+  margin: 0 10px;
 }
 
 footer ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    footer ul li {
-        display: block;
-        margin: 10px 0;
-    }
+  footer ul li {
+    display: block;
+    margin: 10px 0;
+  }
 }
 
 @media (max-width: 480px) {
-    footer {
-        padding: 15px;
-    }
-    footer p {
-        font-size: 12px;
-    }
-    footer ul li a {
-        font-size: 12px;
-    }
+  footer {
+    padding: 15px;
+  }
+  footer p {
+    font-size: 12px;
+  }
+  footer ul li a {
+    font-size: 12px;
+  }
 }
